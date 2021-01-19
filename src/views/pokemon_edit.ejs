@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD POKEDEX</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+<body>
+    
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="/" class="navbar-brand">CRUD POKEDEX</a>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+
+
+                        <form action="/update/<%= data.id %>" method="POST">
+                            <div class="form-group">
+                                <input type="text" name="nombre"  value="<%= data.nombre %>" class="form-control">
+                            </div>
+                            <div class="form-group mt-2">
+                                <input type="text" name="tipo" value="<%= data.tipo %>" class="form-control">
+                            </div>
+                            <div class="form-group mt-2">
+                                <input type="text" name="region" value="<%= data.region %>" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-2"> Editar pokemon </button>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
